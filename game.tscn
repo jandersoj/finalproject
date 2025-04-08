@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://hjcfir8q4sdi"]
+[gd_scene load_steps=12 format=3 uid="uid://hjcfir8q4sdi"]
 
 [ext_resource type="PackedScene" uid="uid://cl0caq60hdjjw" path="res://player.tscn" id="1_3i08q"]
 [ext_resource type="PackedScene" uid="uid://eg1dvo0x6awg" path="res://NPCS/npcRober.tscn" id="4_sfdlf"]
 [ext_resource type="PackedScene" uid="uid://by382ux8dq0pg" path="res://NPCS/npcBoif.tscn" id="5_fmjq1"]
 [ext_resource type="PackedScene" uid="uid://s7t1fdxg3ghr" path="res://House.tscn" id="6_dtjnm"]
 [ext_resource type="PackedScene" uid="uid://dd5n62etvpna4" path="res://road.tscn" id="7_ch5qw"]
+[ext_resource type="AudioStream" uid="uid://bd0tehxwp8568" path="res://sounds/My-Accomplice-Overworld-Music.wav" id="8_5bqhr"]
 [ext_resource type="PackedScene" uid="uid://dlvwn8xocg20f" path="res://SideWalk.tscn" id="8_urhj1"]
 [ext_resource type="PackedScene" uid="uid://ccuewqraqvbe7" path="res://tree.tscn" id="9_ofoww"]
 
@@ -382,3 +383,7 @@ transform = Transform3D(-0.969619, 0, 1.74924, 0, 2, 0, -1.74924, 0, -0.969619, 
 
 [node name="Area3D4" parent="." instance=ExtResource("5_fmjq1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.5436, 2.27239, -44.6037)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_5bqhr")
+autoplay = true
