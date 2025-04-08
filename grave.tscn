@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsjydsgvuwh28"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nqhoh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bevby"]
+albedo_color = Color(0.294028, 0.294028, 0.294028, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ju6o6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjgli"]
+albedo_color = Color(0.312466, 0.312466, 0.312466, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cb7go"]
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_nqhoh")
+surface_material_override/0 = SubResource("StandardMaterial3D_bevby")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(30, 0, 0, 0, 1, 0, 0, 0, 30, 0, 0, 0)
+visible = false
+mesh = SubResource("PlaneMesh_ju6o6")
+surface_material_override/0 = SubResource("StandardMaterial3D_bjgli")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 1.91721, 0)
+mesh = SubResource("CylinderMesh_cb7go")
+skeleton = NodePath("../MeshInstance3D")

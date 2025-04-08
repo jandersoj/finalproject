@@ -1,0 +1,78 @@
+[gd_scene load_steps=14 format=3 uid="uid://eg1dvo0x6awg"]
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_o4u54"]
+radial_steps = 15
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qn3k3"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_k6lvc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gudjf"]
+albedo_color = Color(1, 0.698117, 0.660156, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fcmpx"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ihfj2"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ofp5b"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_3irmx"]
+text = "^"
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_hq318"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_etvdd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y180m"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_w6qy2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hcxji"]
+albedo_color = Color(0.47683, 0.708984, 0.353107, 1)
+
+[node name="Area3D" type="Area3D"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 1.27929, 0)
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9, 0, 0, 0, 0.255897, 0.287063, 0, -0.086119, 0.852992, 0, 0.692612, -0.141326)
+mesh = SubResource("TubeTrailMesh_o4u54")
+skeleton = NodePath("../MeshInstance3D6")
+surface_material_override/0 = SubResource("StandardMaterial3D_qn3k3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.353618, 0)
+mesh = SubResource("SphereMesh_k6lvc")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_gudjf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_fcmpx")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.194238, 0.438653, 0.455154)
+mesh = SubResource("SphereMesh_ihfj2")
+surface_material_override/0 = SubResource("ORMMaterial3D_ofp5b")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.0276492, 0.199574, 0.472681)
+mesh = SubResource("TextMesh_3irmx")
+surface_material_override/0 = SubResource("ORMMaterial3D_hq318")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.208425, 0.438653, 0.455154)
+mesh = SubResource("SphereMesh_ihfj2")
+surface_material_override/0 = SubResource("ORMMaterial3D_ofp5b")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.834333, 0)
+mesh = SubResource("CapsuleMesh_etvdd")
+surface_material_override/0 = SubResource("StandardMaterial3D_y180m")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, -0.679078, 0.075165)
+visible = false
+mesh = SubResource("CapsuleMesh_w6qy2")
+surface_material_override/0 = SubResource("StandardMaterial3D_hcxji")

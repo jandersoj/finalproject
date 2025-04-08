@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://cfg4t3f61gqjq"]
+
+[ext_resource type="Script" path="res://health.gd" id="1_rhpx0"]
+[ext_resource type="Script" path="res://speed.gd" id="2_8giq2"]
+
+[sub_resource type="Theme" id="Theme_pqwb3"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qk7so"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pdh40"]
+texture = SubResource("CanvasTexture_qk7so")
+modulate_color = Color(0.549544, 0.125513, 0.236529, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_58evg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pdc1h"]
+texture = SubResource("CanvasTexture_58evg")
+modulate_color = Color(0.156891, 0.327614, 0.00976679, 1)
+
+[sub_resource type="Theme" id="Theme_0aern"]
+default_base_scale = 0.31
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kmhia"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7xilv"]
+
+[node name="hud" type="CanvasLayer"]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = 1151.0
+offset_top = 3.0
+offset_right = 2247.0
+offset_bottom = 82.0
+theme = SubResource("Theme_pqwb3")
+theme_override_styles/background = SubResource("StyleBoxTexture_pdh40")
+theme_override_styles/fill = SubResource("StyleBoxTexture_pdc1h")
+show_percentage = false
+
+[node name="Health" type="Button" parent="."]
+visible = false
+anchors_preset = -1
+anchor_left = 0.539
+anchor_top = 0.282
+anchor_right = 0.539
+anchor_bottom = 0.282
+offset_left = 0.0719604
+offset_top = 0.263992
+offset_right = 256.072
+offset_bottom = 181.264
+tooltip_text = "HEALTH
+"
+theme = SubResource("Theme_0aern")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kmhia")
+text = "HEALTH"
+script = ExtResource("1_rhpx0")
+
+[node name="Speed" type="Button" parent="."]
+visible = false
+anchors_preset = -1
+anchor_left = 0.306
+anchor_top = 0.33
+anchor_right = 0.306
+anchor_bottom = 0.33
+offset_left = -9.51202
+offset_top = -45.84
+offset_right = 209.488
+offset_bottom = 161.16
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7xilv")
+text = "SPEED"
+script = ExtResource("2_8giq2")
