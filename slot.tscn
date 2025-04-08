@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dts7rel6r6hap"]
+
+[ext_resource type="Texture2D" uid="uid://c0jb0y85y8k5n" path="res://assets/coin.png" id="1_5cp5m"]
+
+[node name="Slot" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(16, 16)
+anchors_preset = -1
+anchor_bottom = 0.027
+offset_left = -9.0
+offset_right = 189.0
+offset_bottom = 243.504
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(11, 32)
+scale = Vector2(0.382, 0.882353)
+texture = ExtResource("1_5cp5m")
+centered = false

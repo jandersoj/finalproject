@@ -5,6 +5,10 @@ extends CharacterBody3D
 @export var jump_velocity: float = 18.0  # Jump force
 @export var gravity: float = 40.0  # Gravity strength
 @onready var progress_bar: ProgressBar = $"hud/ProgressBar"
+<<<<<<< HEAD
+=======
+@export var inventory: Inventory
+>>>>>>> NoahCSC
 var health=100.0
 #var current_room: String= "res://room_1.tscn"
 var direction = Vector3.ZERO
