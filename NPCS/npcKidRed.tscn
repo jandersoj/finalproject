@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://eg1dvo0x6awg"]
+[gd_scene load_steps=14 format=3 uid="uid://dvae6uws11wut"]
 
 [sub_resource type="TubeTrailMesh" id="TubeTrailMesh_o4u54"]
 radial_steps = 15
