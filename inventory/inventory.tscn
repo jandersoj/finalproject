@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://do4kx3qbargqf"]
+
+[ext_resource type="Script" path="res://inventory/inventory_ui.gd" id="1_8j6d5"]
+[ext_resource type="PackedScene" uid="uid://dts7rel6r6hap" path="res://slot.tscn" id="2_dbjw7"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_l58ii"]
+
+[node name="Inventory_UI" type="Control"]
+layout_mode = 3
+anchor_right = 0.983
+anchor_bottom = 0.97
+offset_left = 4.0
+offset_top = -8.0
+offset_right = 27.584
+offset_bottom = 22.44
+script = ExtResource("1_8j6d5")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.017
+offset_right = 8.0
+offset_bottom = -0.203064
+texture = SubResource("CanvasTexture_l58ii")
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -28.0
+offset_right = 38.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="Slot1" parent="NinePatchRect/GridContainer" instance=ExtResource("2_dbjw7")]
+layout_mode = 2
+
+[node name="Slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_dbjw7")]
+layout_mode = 2
+
+[node name="Slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_dbjw7")]
+layout_mode = 2
+
+[node name="Slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_dbjw7")]
+layout_mode = 2
+
+[node name="Slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("2_dbjw7")]
+layout_mode = 2
+
+[node name="Slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("2_dbjw7")]
+layout_mode = 2
+
+[node name="Slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("2_dbjw7")]
+layout_mode = 2
+
+[node name="Slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("2_dbjw7")]
+layout_mode = 2
+
+[node name="Slot9" parent="NinePatchRect/GridContainer" instance=ExtResource("2_dbjw7")]
+layout_mode = 2
+
+[node name="Slot10" parent="NinePatchRect/GridContainer" instance=ExtResource("2_dbjw7")]
+layout_mode = 2
+
+[node name="Slot11" parent="NinePatchRect/GridContainer" instance=ExtResource("2_dbjw7")]
+layout_mode = 2
+
+[node name="Slot12" parent="NinePatchRect/GridContainer" instance=ExtResource("2_dbjw7")]
+layout_mode = 2

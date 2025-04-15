@@ -3,6 +3,9 @@
 [ext_resource type="Script" path="res://player.gd" id="1_et1mi"]
 [ext_resource type="PackedScene" uid="uid://cfg4t3f61gqjq" path="res://hud.tscn" id="2_1ou3x"]
 [ext_resource type="PackedScene" uid="uid://bkshnayqpo053" path="res://NPCS/Keith.tscn" id="4_u3nc3"]
+[ext_resource type="PackedScene" uid="uid://ctwfhu4w0wmqu" path="res://NPCS/Keith.tscn" id="4_u3nc3"]
+[ext_resource type="PackedScene" uid="uid://do4kx3qbargqf" path="res://inventory/inventory.tscn" id="2_qnke4"]
+
 [ext_resource type="Script" path="res://pause.gd" id="5_elm10"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_22lot"]
@@ -15,6 +18,9 @@ height = 3.30538
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_et1mi")
+
+
+[node name="Inventory_UI" parent="." instance=ExtResource("2_qnke4")]
 
 [node name="pause" type="Node3D" parent="."]
 process_mode = 3
@@ -52,3 +58,4 @@ one_shot = true
 
 [node name="Area3D" parent="." instance=ExtResource("4_u3nc3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0343729, 2.18224, 0.0385438)
+
