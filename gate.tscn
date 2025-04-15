@@ -1,0 +1,100 @@
+[gd_scene load_steps=6 format=3 uid="uid://cerrtwop5nds2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_enkhf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3cyky"]
+albedo_color = Color(0.394987, 0.394987, 0.394987, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_l3duq"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_sfcqk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5yeuw"]
+albedo_color = Color(0.556953, 0.556953, 0.556953, 1)
+
+[node name="Area3D" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(30, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_enkhf")
+surface_material_override/0 = SubResource("StandardMaterial3D_3cyky")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(30, 0, 0, 0, 5, 0, 0, 0, 1, 0, -2.90897, 0)
+shape = SubResource("ConcavePolygonShape3D_l3duq")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 2.5, 0, 0, 0, 0.5, 6.59071, -2.43193, 0)
+mesh = SubResource("CylinderMesh_sfcqk")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_5yeuw")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 2.5, 0, 0, 0, 0.5, 9.33858, -2.43193, 0)
+mesh = SubResource("CylinderMesh_sfcqk")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_5yeuw")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 2.5, 0, 0, 0, 0.5, 11.9387, -2.43193, 0)
+mesh = SubResource("CylinderMesh_sfcqk")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_5yeuw")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 2.5, 0, 0, 0, 0.5, 14.3105, -2.43193, 0)
+mesh = SubResource("CylinderMesh_sfcqk")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_5yeuw")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 2.5, 0, 0, 0, 0.5, -3.94018, -2.43193, 0)
+mesh = SubResource("CylinderMesh_sfcqk")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_5yeuw")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 2.5, 0, 0, 0, 0.5, -1.19231, -2.43193, 0)
+mesh = SubResource("CylinderMesh_sfcqk")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_5yeuw")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 2.5, 0, 0, 0, 0.5, 1.40782, -2.43193, 0)
+mesh = SubResource("CylinderMesh_sfcqk")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_5yeuw")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 2.5, 0, 0, 0, 0.5, 3.7796, -2.43193, 0)
+mesh = SubResource("CylinderMesh_sfcqk")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_5yeuw")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 2.5, 0, 0, 0, 0.5, -14.3285, -2.43193, 0)
+mesh = SubResource("CylinderMesh_sfcqk")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_5yeuw")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 2.5, 0, 0, 0, 0.5, -11.5806, -2.43193, 0)
+mesh = SubResource("CylinderMesh_sfcqk")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_5yeuw")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 2.5, 0, 0, 0, 0.5, -8.98051, -2.43193, 0)
+mesh = SubResource("CylinderMesh_sfcqk")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_5yeuw")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 2.5, 0, 0, 0, 0.5, -6.60874, -2.43193, 0)
+mesh = SubResource("CylinderMesh_sfcqk")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_5yeuw")

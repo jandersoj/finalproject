@@ -1,42 +1,46 @@
-<<<<<<< HEAD
-[gd_scene load_steps=11 format=3 uid="uid://hjcfir8q4sdi"]
+
+[gd_scene load_steps=25 format=3 uid="uid://hjcfir8q4sdi"]
+
+#ALL ext_resources should go here so that i can see them -josie <3
+[ext_resource type="Resource" uid="uid://bmyjqn8ov6uiq" path="res://inventory/playerinv.tres" id="2_n2dgc"]
 
 [ext_resource type="PackedScene" uid="uid://cl0caq60hdjjw" path="res://player.tscn" id="1_3i08q"]
-[ext_resource type="PackedScene" uid="uid://eg1dvo0x6awg" path="res://NPCS/npcRober.tscn" id="4_sfdlf"]
-[ext_resource type="PackedScene" uid="uid://by382ux8dq0pg" path="res://NPCS/npcBoif.tscn" id="5_fmjq1"]
 [ext_resource type="PackedScene" uid="uid://s7t1fdxg3ghr" path="res://House.tscn" id="6_dtjnm"]
 [ext_resource type="PackedScene" uid="uid://dd5n62etvpna4" path="res://road.tscn" id="7_ch5qw"]
+[ext_resource type="PackedScene" uid="uid://c8fxwgjc5u3bj" path="res://NPCS/McKeith.tscn" id="8_anidt"]
 [ext_resource type="PackedScene" uid="uid://dlvwn8xocg20f" path="res://SideWalk.tscn" id="8_urhj1"]
+[ext_resource type="PackedScene" uid="uid://coqbo2lyndmma" path="res://grave2.tscn" id="8_xg03y"]
+[ext_resource type="PackedScene" uid="uid://cerrtwop5nds2" path="res://gate.tscn" id="9_4unl3"]
 [ext_resource type="PackedScene" uid="uid://ccuewqraqvbe7" path="res://tree.tscn" id="9_ofoww"]
+[ext_resource type="PackedScene" uid="uid://pstmin0s3ura" path="res://NPCS/KidRed.tscn" id="9_vmjmv"]
+[ext_resource type="PackedScene" uid="uid://bi4ip20tdirvr" path="res://NPCS/KidBlue.tscn" id="10_4v5dq"]
+[ext_resource type="PackedScene" uid="uid://bkshnayqpo053" path="res://NPCS/Keith.tscn" id="11_cenv8"]
+[ext_resource type="PackedScene" uid="uid://dm5g5oepf4cwr" path="res://NPCS/Ghost.tscn" id="12_qlajp"]
+[ext_resource type="PackedScene" uid="uid://bp82np77eg1ut" path="res://NPCS/Cop.tscn" id="13_2uosa"]
+[ext_resource type="PackedScene" uid="uid://bgptkfls558oh" path="res://NPCS/Boif.tscn" id="14_6wdf6"]
+[ext_resource type="PackedScene" uid="uid://dsw0cntyajite" path="res://NPCS/Blue.tscn" id="15_gjnb1"]
+[ext_resource type="PackedScene" uid="uid://xqor3slygits" path="res://NPCS/Black.tscn" id="16_l5sn1"]
+[ext_resource type="PackedScene" uid="uid://b5gqasitxd75j" path="res://NPCS/Bandit.tscn" id="17_qrqwx"]
+[ext_resource type="PackedScene" uid="uid://eg1dvo0x6awg" path="res://NPCS/Alien.tscn" id="18_3wp3g"]
+[ext_resource type="PackedScene" uid="uid://d07wny4wbc86q" path="res://NPCS/Red.tscn" id="19_m7tqt"]
+[ext_resource type="PackedScene" uid="uid://mgbaltlouf5s" path="res://ufo.tscn" id="20_t8w1a"]
+[ext_resource type="Script" path="res://ufo.gd" id="21_pjoux"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_11xn3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_al64h"]
 albedo_color = Color(0, 0.380392, 0, 1)
 
-=======
-[gd_scene load_steps=5 format=3 uid="uid://cqncsmeqp1x2u"]
-
-[ext_resource type="PackedScene" uid="uid://cl0caq60hdjjw" path="res://player.tscn" id="1_3i08q"]
-[ext_resource type="Resource" uid="uid://bmyjqn8ov6uiq" path="res://inventory/playerinv.tres" id="2_n2dgc"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_11xn3"]
-
->>>>>>> NoahCSC
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ravyf"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="main" type="Node"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-<<<<<<< HEAD
-transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 200, -0.514884, 0.0171586, 0.325867)
+transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 200, -0.706767, -0.0413589, 0.306736)
+
 mesh = SubResource("BoxMesh_11xn3")
 surface_material_override/0 = SubResource("StandardMaterial3D_al64h")
-=======
-transform = Transform3D(-620.496, 0, -39515.8, 0, 1, 0, 3951.58, 0, -6204.96, -0.514884, 0.0171586, 0.325867)
-mesh = SubResource("BoxMesh_11xn3")
->>>>>>> NoahCSC
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
@@ -44,17 +48,8 @@ mesh = SubResource("BoxMesh_11xn3")
 shape = SubResource("ConcavePolygonShape3D_ravyf")
 
 [node name="Player" parent="." instance=ExtResource("1_3i08q")]
-<<<<<<< HEAD
+
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.2627, 0.482459, 70.0603)
-
-[node name="Area3D" parent="." instance=ExtResource("4_sfdlf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6885, 2.27239, -25.3386)
-
-[node name="Area3D2" parent="." instance=ExtResource("4_sfdlf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.067, 2.27238, 46.0332)
-
-[node name="Area3D3" parent="." instance=ExtResource("4_sfdlf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.9589, 2.27239, 48.6287)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 104.727, 0)
@@ -69,7 +64,7 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 18, 44.4915, 5.51716, 12.4061)
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 44.4158, 5.51716, -4.16717)
 
 [node name="Area3D8" parent="." instance=ExtResource("6_dtjnm")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 30, -110.677, 4.19618, 2.88446)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 30, -88.411, 5, -73.054)
 
 [node name="Area3D9" parent="." instance=ExtResource("6_dtjnm")]
 transform = Transform3D(35, 0, 0, 0, 10, 0, 0, 0, 10, -0.624635, 5.51716, -46.673)
@@ -165,7 +160,7 @@ transform = Transform3D(-1.74846e-06, 0, 12, 0, 1, 0, -40, 0, -5.24537e-07, -29.
 transform = Transform3D(-1.74846e-06, 0, 12, 0, 1, 0, -40, 0, -5.24537e-07, -29.444, 0.058168, -79.6344)
 
 [node name="Area3D40" parent="." instance=ExtResource("6_dtjnm")]
-transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -67.999, 5.51716, 45.3633)
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -67.999, 5.51716, 5.58789)
 
 [node name="Area3D41" parent="." instance=ExtResource("7_ch5qw")]
 transform = Transform3D(40, 0, 0, 0, 1, 0, 0, 0, 12, 54.2271, 0.1, 31.449)
@@ -398,10 +393,9 @@ transform = Transform3D(-0.969619, 0, 1.74924, 0, 2, 0, -1.74924, 0, -0.969619, 
 
 [node name="Area3D4" parent="." instance=ExtResource("5_fmjq1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.5436, 2.27239, -44.6037)
-=======
+
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.432571, 0.482459, 2.33443)
 inventory = ExtResource("2_n2dgc")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 40, 0)
->>>>>>> NoahCSC
