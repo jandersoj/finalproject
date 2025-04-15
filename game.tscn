@@ -1,12 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://hjcfir8q4sdi"]
-
+<<<<<<< HEAD
+[gd_scene load_steps=11 format=3 uid="uid://hjcfir8q4sdi"]
 
 [ext_resource type="PackedScene" uid="uid://cl0caq60hdjjw" path="res://player.tscn" id="1_3i08q"]
 [ext_resource type="PackedScene" uid="uid://eg1dvo0x6awg" path="res://NPCS/npcRober.tscn" id="4_sfdlf"]
 [ext_resource type="PackedScene" uid="uid://by382ux8dq0pg" path="res://NPCS/npcBoif.tscn" id="5_fmjq1"]
 [ext_resource type="PackedScene" uid="uid://s7t1fdxg3ghr" path="res://House.tscn" id="6_dtjnm"]
 [ext_resource type="PackedScene" uid="uid://dd5n62etvpna4" path="res://road.tscn" id="7_ch5qw"]
-[ext_resource type="AudioStream" uid="uid://bd0tehxwp8568" path="res://sounds/My-Accomplice-Overworld-Music.wav" id="8_5bqhr"]
 [ext_resource type="PackedScene" uid="uid://dlvwn8xocg20f" path="res://SideWalk.tscn" id="8_urhj1"]
 [ext_resource type="PackedScene" uid="uid://ccuewqraqvbe7" path="res://tree.tscn" id="9_ofoww"]
 
@@ -15,6 +14,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_al64h"]
 albedo_color = Color(0, 0.380392, 0, 1)
 
+=======
 [gd_scene load_steps=5 format=3 uid="uid://cqncsmeqp1x2u"]
 
 [ext_resource type="PackedScene" uid="uid://cl0caq60hdjjw" path="res://player.tscn" id="1_3i08q"]
@@ -22,17 +22,21 @@ albedo_color = Color(0, 0.380392, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_11xn3"]
 
+>>>>>>> NoahCSC
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ravyf"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="main" type="Node"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-
+<<<<<<< HEAD
 transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 200, -0.514884, 0.0171586, 0.325867)
 mesh = SubResource("BoxMesh_11xn3")
 surface_material_override/0 = SubResource("StandardMaterial3D_al64h")
-
+=======
+transform = Transform3D(-620.496, 0, -39515.8, 0, 1, 0, 3951.58, 0, -6204.96, -0.514884, 0.0171586, 0.325867)
+mesh = SubResource("BoxMesh_11xn3")
+>>>>>>> NoahCSC
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
@@ -40,7 +44,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_al64h")
 shape = SubResource("ConcavePolygonShape3D_ravyf")
 
 [node name="Player" parent="." instance=ExtResource("1_3i08q")]
-
+<<<<<<< HEAD
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.2627, 0.482459, 70.0603)
 
 [node name="Area3D" parent="." instance=ExtResource("4_sfdlf")]
@@ -394,7 +398,10 @@ transform = Transform3D(-0.969619, 0, 1.74924, 0, 2, 0, -1.74924, 0, -0.969619, 
 
 [node name="Area3D4" parent="." instance=ExtResource("5_fmjq1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.5436, 2.27239, -44.6037)
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.432571, 0.482459, 2.33443)
+inventory = ExtResource("2_n2dgc")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_5bqhr")
-autoplay = true
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 40, 0)
+>>>>>>> NoahCSC
