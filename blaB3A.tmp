@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2chnfaw2g2oj"]
+
+[ext_resource type="Script" path="res://blackjack.gd" id="1_karcl"]
+[ext_resource type="Script" path="res://deck.gd" id="2_b17u2"]
+[ext_resource type="Script" path="res://line_edit.gd" id="3_jmdps"]
+
+[node name="blackjack" type="Node2D"]
+script = ExtResource("1_karcl")
+
+[node name="Card" type="Node2D" parent="."]
+script = ExtResource("1_karcl")
+
+[node name="Deck" type="Node2D" parent="."]
+script = ExtResource("2_b17u2")
+
+[node name="Hit" type="Button" parent="."]
+offset_left = 412.0
+offset_top = 779.0
+offset_right = 491.0
+offset_bottom = 856.0
+theme_override_font_sizes/font_size = 50
+text = "Hit"
+
+[node name="Stay" type="Button" parent="."]
+offset_left = 670.0
+offset_top = 777.0
+offset_right = 781.0
+offset_bottom = 854.0
+theme_override_font_sizes/font_size = 50
+text = "Stay"
+
+[node name="Bet" type="LineEdit" parent="."]
+offset_left = 891.0
+offset_top = 784.0
+offset_right = 1083.0
+offset_bottom = 861.0
+theme_override_font_sizes/font_size = 50
+text = "1000"
+expand_to_text_length = true
+script = ExtResource("3_jmdps")
+
+[node name="BetLabel" type="RichTextLabel" parent="."]
+offset_left = 958.0
+offset_top = 714.0
+offset_right = 1017.0
+offset_bottom = 746.0
+theme_override_font_sizes/normal_font_size = 20
+text = "Bet"
+
+[connection signal="text_submitted" from="Bet" to="." method="_on_line_edit_text_submitted"]

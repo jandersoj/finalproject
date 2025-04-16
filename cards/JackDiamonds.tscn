@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjges1c1uim0q"]
+
+[ext_resource type="Texture2D" uid="uid://crpaw5aytrm06" path="res://card-framework-de4b6c43e4654cd11a35ab1b3637ce9eb3c423f0/example1/assets/images/cards/cardDiamondsJ.png" id="1_ojhjw"]
+
+[node name="JackDiamonds" type="Node2D"]
+
+[node name="CardDiamondsJ" type="Sprite2D" parent="."]
+position = Vector2(60, 94)
+texture = ExtResource("1_ojhjw")

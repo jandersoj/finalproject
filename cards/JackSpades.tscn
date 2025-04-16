@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwkw7wteutd1a"]
+
+[ext_resource type="Texture2D" uid="uid://uhjx2iwel6j4" path="res://card-framework-de4b6c43e4654cd11a35ab1b3637ce9eb3c423f0/example1/assets/images/cards/cardSpadesJ.png" id="1_q3aek"]
+
+[node name="JackSpades" type="Node2D"]
+
+[node name="CardSpadesJ" type="Sprite2D" parent="."]
+position = Vector2(73, 97)
+texture = ExtResource("1_q3aek")
