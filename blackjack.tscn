@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2chnfaw2g2oj"]
+
+[ext_resource type="Script" path="res://blackjack.gd" id="1_karcl"]
+[ext_resource type="Script" path="res://deck.gd" id="2_b17u2"]
+[ext_resource type="Script" path="res://line_edit.gd" id="3_jmdps"]
+
+[node name="blackjack" type="Node2D"]
+script = ExtResource("1_karcl")
+
+[node name="Dealerhand" type="HBoxContainer" parent="."]
+offset_left = 7.0
+offset_top = 12.0
+offset_right = 866.0
+offset_bottom = 217.0
+
+[node name="Playerhand" type="HBoxContainer" parent="."]
+layout_direction = 2
+anchors_preset = -1
+anchor_right = 33.175
+anchor_bottom = 16.3
+offset_left = 44.0
+offset_top = 292.0
+offset_right = 44.0
+offset_bottom = 292.0
+
+[node name="Card" type="Node2D" parent="."]
+script = ExtResource("1_karcl")
+
+[node name="Deck" type="Node2D" parent="."]
+script = ExtResource("2_b17u2")
+
+[node name="Hit" type="Button" parent="."]
+offset_left = 412.0
+offset_top = 779.0
+offset_right = 491.0
+offset_bottom = 856.0
+theme_override_font_sizes/font_size = 50
+text = "Hit"
+
+[node name="Stay" type="Button" parent="."]
+offset_left = 670.0
+offset_top = 777.0
+offset_right = 781.0
+offset_bottom = 854.0
+theme_override_font_sizes/font_size = 50
+text = "Stay"
+
+[node name="Bet" type="LineEdit" parent="."]
+offset_left = 891.0
+offset_top = 784.0
+offset_right = 1083.0
+offset_bottom = 861.0
+theme_override_font_sizes/font_size = 50
+text = "1000"
+expand_to_text_length = true
+script = ExtResource("3_jmdps")
+
+[node name="BetLabel" type="RichTextLabel" parent="."]
+offset_left = 958.0
+offset_top = 714.0
+offset_right = 1017.0
+offset_bottom = 746.0
+theme_override_font_sizes/normal_font_size = 20
+text = "Bet"
+
+[node name="slowdown" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="Money" type="Label" parent="."]
+offset_left = 966.0
+offset_top = 109.0
+offset_right = 1129.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0, 0.788235, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "$10000"
+
+[connection signal="pressed" from="Hit" to="." method="_on_hit_pressed"]
+[connection signal="pressed" from="Stay" to="." method="_on_stay_pressed"]
+[connection signal="text_submitted" from="Bet" to="." method="_on_line_edit_text_submitted"]

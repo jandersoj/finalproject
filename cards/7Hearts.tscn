@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmf4lob3t0wpr"]
+
+[ext_resource type="Texture2D" uid="uid://c3d5ufd2lcm0r" path="res://card-framework-de4b6c43e4654cd11a35ab1b3637ce9eb3c423f0/example1/assets/images/cards/cardHearts7.png" id="1_wl5bp"]
+
+[node name="7Hearts" type="Node2D"]
+
+[node name="CardHearts7" type="Sprite2D" parent="."]
+position = Vector2(71, 100)
+texture = ExtResource("1_wl5bp")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8541pe7pxejf"]
+
+[ext_resource type="Texture2D" uid="uid://gdhf1vsadww" path="res://card-framework-de4b6c43e4654cd11a35ab1b3637ce9eb3c423f0/example1/assets/images/cards/cardDiamonds8.png" id="1_2scs4"]
+
+[node name="8Diamonds" type="Node2D"]
+
+[node name="CardDiamonds8" type="Sprite2D" parent="."]
+position = Vector2(74, 103)
+texture = ExtResource("1_2scs4")

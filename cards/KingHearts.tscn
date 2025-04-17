@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpcg2jumg6cx2"]
+
+[ext_resource type="Texture2D" uid="uid://ioeex7gf0a8n" path="res://card-framework-de4b6c43e4654cd11a35ab1b3637ce9eb3c423f0/example1/assets/images/cards/cardHeartsK.png" id="1_fns3p"]
+
+[node name="KingHearts" type="Node2D"]
+
+[node name="CardHeartsK" type="Sprite2D" parent="."]
+position = Vector2(70, 94)
+texture = ExtResource("1_fns3p")
