@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=3 uid="uid://64hnhfxtrpsg"]
+
+[ext_resource type="Script" path="res://line_edit.gd" id="1_3ox31"]
+[ext_resource type="Script" path="res://poker.gd" id="1_70gri"]
+
+[node name="Poker" type="Node2D"]
+script = ExtResource("1_70gri")
+
+[node name="Dealerhand" type="HBoxContainer" parent="."]
+offset_top = 183.0
+offset_right = 1141.0
+offset_bottom = 390.0
+
+[node name="Playerhand" type="HBoxContainer" parent="."]
+offset_left = 3.0
+offset_top = 502.0
+offset_right = 1558.0
+offset_bottom = 674.0
+
+[node name="Money" type="Label" parent="."]
+offset_left = 966.0
+offset_top = 109.0
+offset_right = 1129.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0, 0.788235, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "$10000"
+
+[node name="slowdown" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="BetLabel" type="RichTextLabel" parent="."]
+offset_left = 958.0
+offset_top = 714.0
+offset_right = 1017.0
+offset_bottom = 746.0
+theme_override_font_sizes/normal_font_size = 20
+text = "Bet"
+
+[node name="Bet" type="LineEdit" parent="."]
+offset_left = 891.0
+offset_top = 784.0
+offset_right = 1083.0
+offset_bottom = 861.0
+theme_override_font_sizes/font_size = 50
+text = "1000"
+expand_to_text_length = true
+script = ExtResource("1_3ox31")
+
+[node name="Discard" type="Button" parent="."]
+visible = false
+offset_left = 170.0
+offset_top = 773.0
+offset_right = 359.0
+offset_bottom = 850.0
+theme_override_font_sizes/font_size = 50
+text = "Discard"
+
+[node name="End turn" type="Button" parent="."]
+offset_left = 574.0
+offset_top = 776.0
+offset_right = 746.0
+offset_bottom = 853.0
+theme_override_font_sizes/font_size = 50
+text = "End Turn"
+
+[connection signal="text_submitted" from="Bet" to="." method="_on_bet_text_submitted"]
+[connection signal="pressed" from="End turn" to="." method="_on_end_turn_pressed"]

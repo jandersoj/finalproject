@@ -56,6 +56,7 @@ var wager:float=0
 var roundcounter=1
 var counter=2
 var pvalue1=0
+var cardstringreveal
 #var entry
 func play():
 	#hand = "Your hand is now: " + playerhand[0] + ", " + playerhand[1]
@@ -103,6 +104,7 @@ func _process(delta: float) -> void:
 	#bankroll=10000
 	#hand = "Your hand is now: " + str(playerhand[0]) + ", " + str(playerhand[1])
 	if bankroll>0 && input=="":
+		pass
 		#maybe change to while
 		#print("Let's play Blackjack! How much of your $" + str(bankroll) + "0 would you like to wager?")
 		#Make input box for wager
@@ -131,8 +133,8 @@ func _process(delta: float) -> void:
 			#	dealerturn()
 			#compare()
 			#roundcounter+=1
-			if Globals.bankroll<=0:
-				print("You lose!!!")
+			#if Globals.bankroll<=0:
+			#	print("You lose!!!")
 				#Change scene to casino
 			
 func taketurn():
@@ -216,6 +218,7 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 			dealerhand[i]=deal()
 			if i==0:
 				var cardstring="res://cards/blank.tscn"
+				cardstringreveal="res://cards/"+str(dealerhand[i].get_faces())+str(dealerhand[i].get_suit())+".tscn"
 				var CARD=load(cardstring)
 				var displayc=CARD.instantiate()
 				displayc.position.x=displayc.position.x + (i * 160)
@@ -239,7 +242,7 @@ func pvalue():
 	var pvalue=0
 	for i in range(playerhand.size()):
 		pvalue+=playerhand[i].face_value()
-	if pvalue>=11:
+	if pvalue<=11:
 		pvalue=0
 		for i in range(playerhand.size()):
 			if playerhand[i].get_faces()=="Ace" && pvalue<=10:
@@ -251,7 +254,7 @@ func dvalue():
 	var dvalue=0
 	for i in range(dealerhand.size()):
 		dvalue+=dealerhand[i].face_value()
-	if dvalue>=11:
+	if dvalue<=11:
 		dvalue=0
 		for i in range(dealerhand.size()):
 			if dealerhand[i].get_faces()=="Ace" && dvalue<=10:
@@ -295,6 +298,18 @@ func _on_stay_pressed() -> void:
 	taketurn()
 	dealerturn()
 	compare()
+	var hidden=$Dealerhand.get_children()
+	for i in hidden:
+		if i==hidden[0]:
+			#i.queue_free()
+			Globals.dealerxpos=160
+			#var cardstring="res://cards/"+str(dealerhand[i].get_faces())+str(dealerhand[i].get_suit())+".tscn"
+			i.queue_free()
+			var CARD=load(cardstringreveal)
+			var displayc=CARD.instantiate()
+			displayc.position.x=displayc.position.x
+			#displayc.position.y=500
+			$Dealerhand.add_child(displayc)
 	$slowdown.start()
 	await $slowdown.timeout
 	if $slowdown.is_stopped():
