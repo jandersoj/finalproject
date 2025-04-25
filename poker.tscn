@@ -65,5 +65,21 @@ offset_bottom = 853.0
 theme_override_font_sizes/font_size = 50
 text = "End Turn"
 
+[node name="Dealervalue" type="Label" parent="."]
+offset_left = 1017.0
+offset_top = 324.0
+offset_right = 1057.0
+offset_bottom = 366.0
+theme_override_font_sizes/font_size = 30
+text = "??"
+
+[node name="Playervalue" type="Label" parent="."]
+offset_left = 1031.0
+offset_top = 448.0
+offset_right = 1071.0
+offset_bottom = 490.0
+theme_override_font_sizes/font_size = 30
+text = "0"
+
 [connection signal="text_submitted" from="Bet" to="." method="_on_bet_text_submitted"]
 [connection signal="pressed" from="End turn" to="." method="_on_end_turn_pressed"]

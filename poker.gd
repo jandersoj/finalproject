@@ -66,6 +66,7 @@ var cardstringreveal4
 var playervalue=0
 var dealervalue=0
 func pvalue():
+	playervalue=0
 	var curremtsuit=playerhand[0].get_suit()
 	for i in range(playerhand.size()):
 		playervalue+=playerhand[i].face_value()
@@ -75,7 +76,7 @@ func pvalue():
 			playervalue+=11
 		
 func dvalue():
-	
+	dealervalue=0
 	var curremtsuit=dealerhand[0].get_suit()
 	for i in range(dealerhand.size()):
 		dealervalue+=dealerhand[i].face_value()
@@ -187,6 +188,8 @@ func _on_end_turn_pressed() -> void:
 	$Money.text="$"+str(Globals.bankroll)
 	print(dealervalue)
 	print(playervalue)
+	$Playervalue.text=str(playervalue)
+	$Dealervalue.text=str(dealervalue)
 	for i in hidden:
 		
 			#i.queue_free()

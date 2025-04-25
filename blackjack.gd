@@ -283,6 +283,8 @@ func compare():
 			Globals.bankroll-=wager
 		print(Globals.bankroll)
 		$Money.text="$"+str(Globals.bankroll)
+		$Playervalue.text=str(pvalue())
+		$Dealervalue.text=str(dvalue())
 
 
 func _on_hit_pressed() -> void:
